@@ -13,7 +13,6 @@ class UpdateProcedure extends Component {
     }
 
   handleInProgress= (e) => {
-    console.log(this.props.procedure);
       e.preventDefault();
       this.props.dispatch({
         type: "INPROGRESS_PROCEDURE",

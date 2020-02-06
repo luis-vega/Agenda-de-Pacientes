@@ -9,7 +9,6 @@ const procedures = (state = [], action) => {
       action.payload.status = "In Progress";
       return state.map((procedure)=>procedure.id === action.payload.id ? {...procedure}:procedure)
     case "FINISHED_PROCEDURE":
-      console.log(action.payload)
       return state.filter((procedure)=>procedure.id !== action.payload.id);
     default:
       return state;
