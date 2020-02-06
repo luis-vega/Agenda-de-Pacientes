@@ -1,68 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created as a test from Caresyntax. This project was created as a test from Caresyntax.
+It is a basic ReactJS + Redux App that involves the CRUD functions and the use of the redux store, and react reducers and dispatch actions as best as possible. For the styling, the React-Bootstrap framework was used, in order to give some style to the forms and button using classNames.
+## The are 4 reducers for the complete App:
+doctor reducer: In charge of building an array for the 3 hardcoded doctors consider for the app
+room reducer: In charge of building an array for the 5 hardcoded rooms consider for the app
+user reducer: In charge of building the array of users based on the input that is receive in the User.js file
+procedure reducer: This reducer have 3 different task, depending what the users are intending to do. Could create the list of procedures based on input collected in the Procedures.js file, it could edit the procedure if the In Progress button is clicked or it can delete the procedure if the Finished button is clicked.
 
-## Available Scripts
+These four reducers are connected to the store, in order to save the state acter the action they are intended to do is perform.
+## For the store I have combined the reducers using the combine reducers helper function
+Also, the applyMiddleware function has been implemented in the store, in order to use the redux logger which presents in a preferred way for me the previous state, the action, and the next state. This helped me to verify that the actions were executed in the way I was expecting or not.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## The App has a principal container call App.js
+In charge of rendering the other js files that are used for the requirements of adding patients, scheduling procedures and updating the status of them if wanted.
