@@ -32,7 +32,8 @@ class UpdateProcedure extends Component {
           </Form.Group>
           <Form.Group className="p-2 text-center">
             <Form.Label className="p-2 text-center">Patient</Form.Label>
-            <Form.Control size = "sm" plaintext readOnly value= {this.props.procedure.patient} className="p-2 text-center"/>
+            <Form.Control size = "sm" plaintext readOnly value= {this.props.users.find((user) =>
+                                                user.id == this.props.procedure.patient).name} className="p-2 text-center"/>
           </Form.Group>
           <Form.Group className="p-2 text-center">
             <Form.Label className="p-2 text-center">Procedure Description</Form.Label>
@@ -46,11 +47,13 @@ class UpdateProcedure extends Component {
         <Form.Row className="d-flex justify-content-center">
         <Form.Group className="p-2 text-center">
           <Form.Label className="p-2 text-center">Performing Doctor</Form.Label>
-          <Form.Control size = "sm" plaintext readOnly value= {this.props.procedure.doctor} className="p-2 text-center"/>
+          <Form.Control size = "sm" plaintext readOnly value= {this.props.doctors.find((doctor) =>
+                                              doctor.id == this.props.procedure.doctor).name}className="p-2 text-center"/>
         </Form.Group>
         <Form.Group className="p-2 text-center">
           <Form.Label className="p-2 text-center">Procedure Room</Form.Label>
-          <Form.Control size = "sm" plaintext readOnly value= {this.props.procedure.room} className="p-2 text-center"/>
+          <Form.Control size = "sm" plaintext readOnly value= {this.props.rooms.find((room) =>
+                                              room.id == this.props.procedure.room).name}className="p-2 text-center"/>
         </Form.Group>
           <Form.Group className="p-2 text-center">
             <Form.Label className="p-2 text-center">Procedure Planned Start time</Form.Label>

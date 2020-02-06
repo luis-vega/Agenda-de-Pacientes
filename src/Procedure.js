@@ -7,8 +7,7 @@ class Procedure extends Component {
   handleSubmitProc = (e) => {
     e.preventDefault();
     const id = 0;
-
-    const patient = this.props.users['0']['name'];
+    const patient = this.getPatient.value;
     const description = this.getDescription.value;
     const doctor = this.getDoctor.value;
     const room = this.getRoom.value;
